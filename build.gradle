@@ -1,0 +1,61 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+apply from: 'gretty.plugin'
+
+
+
+configurations {
+  runtimeOnly
+}
+
+gretty {
+  servletContainer = 'tomcat8'
+  httpsEnabled = true
+  jvmArgs = ['-Dspring.profiles.active=development']
+  httpPort = 9081
+  httpsPort = 9043
+}
+
+repositories {
+    mavenCentral()
+}
+
+task stage(dependsOn: ["clean", "war", "copyToLib"])
+
+task copyToLib << {
+  copy {
+    from configurations.runtimeOnly.copy().setTransitive(false)
+    into "$buildDir/libs"
+    rename { name ->
+      def artifacts = configurations.runtimeOnly.resolvedConfiguration.resolvedArtifacts
+      def artifact = artifacts.find { it.file.name == name }
+      "${artifact.name}.${artifact.extension}"
+    }
+  }
+}
+
+
+
+
+dependencies {
+        compile 'javax.servlet:javax.servlet-api:3.1.0'
+        compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.0.RELEASE'
+        compile group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.1'
+        compile group: 'jstl', name: 'jstl', version: '1.2'
+        compile group: 'org.springframework.security', name: 'spring-security-core', version: '4.2.0.RELEASE'
+        compile group: 'org.springframework.security', name: 'spring-security-web', version: '4.2.0.RELEASE'
+        compile group: 'org.springframework.security', name: 'spring-security-config', version: '4.2.0.RELEASE'
+        compile group: 'org.springframework.security', name: 'spring-security-ldap', version: '4.2.0.RELEASE' 
+        compile group: 'org.apache.directory.server', name: 'apacheds-bootstrap-partition', version: '1.5.5'
+        compile group: 'org.apache.directory.server', name: 'apacheds-server-jndi', version: '1.5.5'   
+        compile group: 'org.springframework.security', name: 'spring-security-test', version: '4.2.0.RELEASE'  
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+        compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'  
+        testCompile 'junit:junit:4.12'
+        testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.0.RELEASE'
+        runtimeOnly group: 'com.github.jsimone', name: 'webapp-runner', version: '8.0.33.0'
+}
+
+
+
