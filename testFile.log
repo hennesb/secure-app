@@ -1,0 +1,172 @@
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.catalina.core.StandardService - Starting service Tomcat
+INFO org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.23
+INFO org.apache.catalina.startup.ContextConfig - No global web.xml found
+INFO org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - 1 Spring WebApplicationInitializers detected on classpath
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9043"]
+INFO org.akhikhl.gretty.TomcatServerStartInfo - Tomcat 8.0.23 started and listening on ports 9081, 9043
+INFO org.akhikhl.gretty.TomcatServerStartInfo - secure-app runs at:
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   http://localhost:9081/secure-app
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   https://localhost:9043/secure-app
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.catalina.core.StandardService - Stopping service Tomcat
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.catalina.core.StandardService - Starting service Tomcat
+INFO org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.23
+INFO org.apache.catalina.startup.ContextConfig - No global web.xml found
+INFO org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - 1 Spring WebApplicationInitializers detected on classpath
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9043"]
+INFO org.akhikhl.gretty.TomcatServerStartInfo - Tomcat 8.0.23 started and listening on ports 9081, 9043
+INFO org.akhikhl.gretty.TomcatServerStartInfo - secure-app runs at:
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   http://localhost:9081/secure-app
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   https://localhost:9043/secure-app
+ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app].[default] - Servlet.service() for servlet [default] in context with path [/secure-app] threw exception
+java.lang.IllegalStateException: No WebApplicationContext found: no ContextLoaderListener or DispatcherServlet registered?
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:252) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219) ~[tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
+ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app].[default] - Servlet.service() for servlet [default] in context with path [/secure-app] threw exception
+java.lang.IllegalStateException: No WebApplicationContext found: no ContextLoaderListener or DispatcherServlet registered?
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:252) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219) ~[tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.23.jar:8.0.23]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.catalina.core.StandardService - Stopping service Tomcat
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.catalina.core.StandardService - Starting service Tomcat
+INFO org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.23
+INFO org.apache.catalina.startup.ContextConfig - No global web.xml found
+INFO org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - 1 Spring WebApplicationInitializers detected on classpath
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.catalina.core.StandardService - Stopping service Tomcat
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.catalina.core.StandardService - Starting service Tomcat
+INFO org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.23
+INFO org.apache.catalina.startup.ContextConfig - No global web.xml found
+INFO org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - 2 Spring WebApplicationInitializers detected on classpath
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Initializing Spring root WebApplicationContext
+INFO org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sun Apr 09 22:44:58 IST 2017]; root of context hierarchy
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Registering annotated classes: [class ie.bootstrap.AppConfig]
+INFO org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e0ae34b, org.springframework.security.web.context.SecurityContextPersistenceFilter@2671e4a4, org.springframework.security.web.header.HeaderWriterFilter@1da0f630, org.springframework.security.web.csrf.CsrfFilter@2a9b289d, org.springframework.security.web.authentication.logout.LogoutFilter@4b2418c0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4063cf15, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@37c3439d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e1c9975, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34696307, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79c3407b, org.springframework.security.web.session.SessionManagementFilter@8996bac, org.springframework.security.web.access.ExceptionTranslationFilter@581ee8f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d18190f]
+INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sun Apr 09 22:44:58 IST 2017]; root of context hierarchy
+INFO org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 930 ms
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Initializing Spring FrameworkServlet 'dispatcher'
+INFO org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Apr 09 22:44:59 IST 2017]; parent: Root WebApplicationContext
+INFO org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 19 ms
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.catalina.core.StandardService - Stopping service Tomcat
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Destroying Spring FrameworkServlet 'dispatcher'
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Apr 09 22:44:59 IST 2017]; parent: Root WebApplicationContext
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Closing Spring root WebApplicationContext
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Sun Apr 09 22:44:58 IST 2017]; root of context hierarchy
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.catalina.core.StandardService - Starting service Tomcat
+INFO org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.23
+INFO org.apache.catalina.startup.ContextConfig - No global web.xml found
+INFO org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - 2 Spring WebApplicationInitializers detected on classpath
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Initializing Spring root WebApplicationContext
+INFO org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sun Apr 09 22:45:07 IST 2017]; root of context hierarchy
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Registering annotated classes: [class ie.bootstrap.AppConfig]
+INFO org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56b50df1, org.springframework.security.web.context.SecurityContextPersistenceFilter@35a782ed, org.springframework.security.web.header.HeaderWriterFilter@10d3119, org.springframework.security.web.csrf.CsrfFilter@2197cf35, org.springframework.security.web.authentication.logout.LogoutFilter@2c71f92d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2285fb43, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4c87b3fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41477da4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e794097, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b5f273f, org.springframework.security.web.session.SessionManagementFilter@4ca4544e, org.springframework.security.web.access.ExceptionTranslationFilter@2abb3c9a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e6088a0]
+INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sun Apr 09 22:45:07 IST 2017]; root of context hierarchy
+INFO org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1141 ms
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Initializing Spring FrameworkServlet 'dispatcher'
+INFO org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Apr 09 22:45:08 IST 2017]; parent: Root WebApplicationContext
+INFO org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 23 ms
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9043"]
+INFO org.akhikhl.gretty.TomcatServerStartInfo - Tomcat 8.0.23 started and listening on ports 9081, 9043
+INFO org.akhikhl.gretty.TomcatServerStartInfo - secure-app runs at:
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   http://localhost:9081/secure-app
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   https://localhost:9043/secure-app
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.catalina.core.StandardService - Stopping service Tomcat
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Destroying Spring FrameworkServlet 'dispatcher'
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sun Apr 09 22:45:08 IST 2017]; parent: Root WebApplicationContext
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/secure-app] - Closing Spring root WebApplicationContext
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Sun Apr 09 22:45:07 IST 2017]; root of context hierarchy
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9043"]
