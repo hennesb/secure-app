@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="2.0">
+	<wb-module deploy-name="secure-app">
+		<property name="context-root" value="secure-app"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
+		<wb-resource deploy-path="/" source-path="src/main/webapp"/>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.0.RELEASE/f520c7aee723480697053040ffc087e7330f155d/spring-webmvc-4.3.0.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/javax.servlet.jsp/javax.servlet.jsp-api/2.3.1/95c630902565feda8155eb32d46064ef348435fc/javax.servlet.jsp-api-2.3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/jstl/jstl/1.2/74aca283cd4f4b4f3e425f5820cda58f44409547/jstl-1.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.2.0.RELEASE/a6487a92dae110c19033a0b284bdd462d8719ced/spring-security-core-4.2.0.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/4.2.0.RELEASE/bd8415c9e15b8c66adce85c20e585e2a700535e9/spring-security-web-4.2.0.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/4.2.0.RELEASE/e34283c282e1afc7ad2efb88c830bf8c0b74aa35/spring-security-config-4.2.0.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-ldap/4.2.0.RELEASE/e67d9863709d3e5810c3e71867f545bfb850bd5a/spring-security-ldap-4.2.0.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-bootstrap-partition/1.5.5/2f49deafcfb963b350347067b2d05cc6494762ec/apacheds-bootstrap-partition-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-server-jndi/1.5.5/150e5d7dccabcdd6f79888ec8750c925cd1d2f03/apacheds-server-jndi-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-test/4.2.0.RELEASE/59ae63b09a7e2594ceca88dcf91bde599cbe2bee/spring-security-test-4.2.0.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.3/7c4f3c474fb2c041d8028740440937705ebb473a/logback-classic-1.2.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.7.0/f042fe2676bfdc2091545152e47d77e11999946d/jjwt-0.7.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework.ldap/spring-ldap-core/2.2.0.RELEASE/45f2838f37854bbdb868323918ba6783dd3c30cf/spring-ldap-core-2.2.0.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.4.RELEASE/303d00338193c04312426325121572d2fc1d4ec5/spring-tx-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-jdbm-store/1.5.5/41ad6fc032254cd40793a39bf1fe062a3aabd16f/apacheds-jdbm-store-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-bootstrap-extract/1.5.5/39726f002259550f6f08534b0f4226d3a84582b6/apacheds-bootstrap-extract-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-schema-extras/1.5.5/816d89b19b61251ad0983e4eb68c01c7f87dd281/apacheds-schema-extras-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.shared/shared-ldap/0.9.15/c902a1755d5a33396ae178cae9a1195a6f1d08b9/shared-ldap-0.9.15.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-protocol-ldap/1.5.5/f6f8cb2e97a64d34fbf393c746b0a4a3136ff801/apacheds-protocol-ldap-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-core-jndi/1.5.5/8fb5868b005568555e447b62556bf7d050c697/apacheds-core-jndi-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.4.RELEASE/a4e28d4eaaa6174928c3edf784faba78bfc046ec/spring-test-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.2.3/864344400c3d4d92dfeb0a305dc87d953677c03c/logback-core-1.2.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.2/1f12816593c1422be957471c98a80bfbace60fa2/jackson-databind-2.8.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-jdbm/1.5.5/b2e563d45c7a4cdf840fd5d49428692e0b5b6955/apacheds-jdbm-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-core-constants/1.5.5/475893bea4fe50b82f2b361755805d18327391e3/apacheds-core-constants-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-core-entry/1.5.5/f96af6676dba29782387711b636841fda0d04084/apacheds-core-entry-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-core-avl/1.5.5/f11563fc86bfa8caaddc1b498288bb0fb767a060/apacheds-core-avl-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-xdbm-base/1.5.5/7564f8dc67d5b679526486d3011b062821aa4ccb/apacheds-xdbm-base-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-schema-registries/1.5.5/a175780bc8a76ad2c2516f2dec7cd90a6f240bcb/apacheds-schema-registries-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-schema-bootstrap/1.5.5/a76586c4895dd8ff21b305485207023f491229a7/apacheds-schema-bootstrap-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.4/16313e02a793435009f1e458fa4af5d879f6fb11/commons-lang-2.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.1/761ea405b9b37ced573d2df0d1e3a4e0f9edc668/commons-collections-3.2.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.shared/shared-asn1/0.9.15/c7bf2218d8e27f6d6642bd4ac12f7eae9b670592/shared-asn1-0.9.15.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.shared/shared-ldap-constants/0.9.15/cc5b734fa27dfdf97314b9aefa96853e0909ca04/shared-ldap-constants-0.9.15.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.shared/shared-asn1-codec/0.9.15/b44ac305aec48cfa36fab90f5fb95ea2b3975d8f/shared-asn1-codec-0.9.15.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-kerberos-shared/1.5.5/c170e0e38d02eeb3b2b395b50d2d10707dfbc93c/apacheds-kerberos-shared-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-core/1.5.5/3c9e6bcb3e2419866f80f963aaf35d65dd67d9e5/apacheds-core-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-protocol-shared/1.5.5/94cbc00d5cae1ad1607c146952354359d056565d/apacheds-protocol-shared-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/45b426f7796b741035581a176744d91090e2e6fb/jackson-annotations-2.8.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.2/80004060cc6f71a027b81e89ef4d74628f824f/jackson-core-2.8.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.shared/shared-cursor/0.9.15/61772611b63da7d5d9d2f0438c80ba55f0c00053/shared-cursor-0.9.15.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-core-shared/1.5.5/f28ab38ff1315d0b14ed747712ed452fbc7266f9/apacheds-core-shared-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.mina/mina-core/2.0.0-M6/1c5f4564ae6e5f5a7b4d6c5f780ef290c5cbc9d7/mina-core-2.0.0-M6.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-xdbm-search/1.5.5/e2202ccb15d5af49fd982daac289b8b12019e157/apacheds-xdbm-search-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-xdbm-tools/1.5.5/fc1bf57bf99956c1552359dc9aac6cf25994c3fe/apacheds-xdbm-tools-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.apache.directory.server/apacheds-utils/1.5.5/fb86e70d68bf73d2fa2a4e464081ae60f2765b96/apacheds-utils-1.5.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/bouncycastle/bcprov-jdk15/140/83933f3f3312473afbe42a232392b3feffaadc36/bcprov-jdk15-140.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/1.4/a8762d07e76cfde2395257a5da47ba7c1dbd3dce/commons-io-1.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.4.RELEASE/43f3d4a43a8dcc91137e092b981101332a645e4b/spring-aop-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.4.RELEASE/4fbf4327d6c7f81c821f2d56e8695d394c7b930a/spring-beans-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.4.RELEASE/c8086505715fba4927fed3d7e3314692817413b6/spring-context-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.4.RELEASE/da373e491d3863477568896089ee9457bc316783/spring-core-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.4.RELEASE/5573955b5373669be0e352a1eb5dc9c87b069cb6/spring-expression-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/hennesb/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.4.RELEASE/719f05404ba8a9de1516398d31d9622042584f0d/spring-web-4.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>
