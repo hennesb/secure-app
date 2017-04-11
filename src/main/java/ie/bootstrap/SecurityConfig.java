@@ -13,15 +13,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-	  auth.inMemoryAuthentication().withUser("hennesb").password("pa55w0rd1").roles("USER");
+	  auth.inMemoryAuthentication().withUser("user1").password("pa55w0rd1").roles("USER");
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
 	  http.authorizeRequests()
 		.antMatchers("/admin/**").access("hasRole('USER')")
 		.and().formLogin();
-
 	}
 }
