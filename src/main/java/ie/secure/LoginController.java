@@ -4,18 +4,14 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
-import java.security.Key;
-import io.jsonwebtoken.*;
-import java.util.Date;
 import java.util.UUID;    
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.Claims;
@@ -23,29 +19,54 @@ import io.jsonwebtoken.Claims;
 @Controller
 public class LoginController {
 	
-	private static final String APP = "secure-apps";
-	private static final String COOKIE_NAME = "JWTCOOKIE";
-	private static final int TTL = 300000;
+	private static final String UNAUTHENTICATED = "UNAUTHENTICATED";
 	
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public ModelAndView loginPage(HttpServletRequest req, HttpServletResponse resp) {
+	@Autowired
+	private AppTokenProducer producer;
+
+	public void setProducer(AppTokenProducer producer) {
+		this.producer = producer;
+	}
+
+	public void setCookieMonster(CookieMonster cookieMonster) {
+		this.cookieMonster = cookieMonster;
+	}
+
+	@Autowired
+	private CookieMonster cookieMonster;
+		
+	
+	@RequestMapping(value = AppControllerUrls.ADMIN_URL, method = RequestMethod.GET)
+	public String loginPage(HttpServletRequest req, HttpServletResponse resp, Model model) {
 		setToken(resp);
-        return onUI();
+		setModel(model);
+        return AbstractLoginViews.JWT_VIEW;
 	}
 	
-	@RequestMapping(value = "/display", method = RequestMethod.GET)
+
+	
+	@RequestMapping(value = {"/display", "/" }, method = RequestMethod.GET)
 	public String displayPage(HttpServletRequest req, HttpServletResponse resp, Model model) {
-		parseJWT(getCookie(req) , model);
-		return "jwt-display";
+		String jwtToken = getJWTCookie(req);
+		if ( jwtToken != null){
+		   Claims claim = parseJWT(jwtToken);
+		   setJWTModelAttributes(model, claim);
+		}
+		return AbstractLoginViews.JWT_VIEW;
 	}
 	
+	@RequestMapping(value = "/contentTest", method = RequestMethod.GET)
+	public String contentTest(HttpServletRequest req, HttpServletResponse resp, Model model) {
+		setCsrfToken(resp);
+		return "index";
+	}
 	
-	public String getCookie(HttpServletRequest req){
+	private String getJWTCookie(HttpServletRequest req){
+        String value = null;
 		Cookie[] cookies = req.getCookies();
-        String value = "";
 		if (cookies != null) {
 		 for (Cookie cookie : cookies) {
-		   if (cookie.getName().equals("JWTCOOKIE")) {
+		   if (cookie.getName().equals(CookieConfig.JWT_COOKIE_NAME)) {
 			   value = cookie.getValue();
 		    }
 		  }
@@ -53,65 +74,43 @@ public class LoginController {
 		return value;
 	}
 	
+	private void setCsrfToken(HttpServletResponse resp){
+		resp.addCookie(csrfCookie());
+	}
+	
 	private void setToken(HttpServletResponse resp){
-		resp.addCookie(jwtCookie());
+		resp.addCookie(cookieMonster.jwtCookie(Identity.builder().withUserName(whoami()).build()));
 	}
 	
-	private Cookie jwtCookie(){
-		Cookie cookie = new Cookie(COOKIE_NAME, createJWT(TTL));
-		cookie.setSecure(true);
-		cookie.setHttpOnly(true);
-		cookie.setMaxAge(-1);
-		return cookie;
+	
+	private Cookie csrfCookie(){
+		return cookieMonster.csrfCookie();
 	}
 	
-	private ModelAndView onUI(){
-		ModelAndView model = new ModelAndView();
-		model.addObject("title", "Test for json we token");
-		model.addObject("message", "In dev tools check the cookie ");
-		model.addObject("userName", whoami());
-		model.setViewName("login-display");
-		return model;		
-	}
-
-	private String whoami(){
+	private String whoami() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		return auth.getName();
+		if (auth != null) {
+			return auth.getName();
+		}else{
+			return UNAUTHENTICATED;
+		}
+		
 	}
 	
-	private void setTTL(JwtBuilder builder, long ttlMillis, long now){
-	    if (ttlMillis >= 0) {
-	    long expMillis = now + ttlMillis;
-	        Date exp = new Date(expMillis);
-	        builder.setExpiration(exp);
-	    }		
+	private Claims parseJWT(String jwt) {
+		return producer.extractJWTTokenDetails(jwt);	
 	}
 	
-	private String createJWT(long ttlMillis) {
-	    SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-	    long nowMillis = System.currentTimeMillis();
-	    Date now = new Date(nowMillis);
-	    byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary("some-secret-key");
-	    Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
-	 
-	    JwtBuilder builder = Jwts.builder().setId(UUID.randomUUID().toString())
-	                                .setIssuedAt(now)
-	                                .setSubject(whoami())
-	                                .setIssuer(APP)
-	                                .signWith(signatureAlgorithm, signingKey);
-
-	    setTTL(builder, ttlMillis, nowMillis);
-	    return builder.compact();
+	private void setJWTModelAttributes(Model model, Claims claims){
+		model.addAttribute("id", claims.getId());
+		model.addAttribute("subject", claims.getSubject());
+		model.addAttribute("issuer", claims.getIssuer());
+		model.addAttribute("expiration", claims.getExpiration());		
 	}
 	
-	private void parseJWT(String jwt, Model model) {
-	    Claims claims = Jwts.parser()         
-	       .setSigningKey(DatatypeConverter.parseBase64Binary("some-secret-key"))
-	       .parseClaimsJws(jwt).getBody();
-	    model.addAttribute("id", claims.getId());
-	    model.addAttribute("subject", claims.getSubject());
-	    model.addAttribute("issuer", claims.getIssuer());
-	    model.addAttribute("expiration", claims.getExpiration());
-	
+	private void setModel(Model model){
+		model.addAttribute("title", "Test for json we token");
+		model.addAttribute("message", "In dev tools check the cookie ");
+		model.addAttribute("userName", whoami());		
 	}
 }

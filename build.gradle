@@ -53,6 +53,7 @@ dependencies {
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
         compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'  
         compile 'io.jsonwebtoken:jjwt:0.7.0'
+        compile group: 'org.jmockit', name: 'jmockit', version: '1.8'     
         testCompile 'junit:junit:4.12'
         testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.0.RELEASE'
         runtimeOnly group: 'com.github.jsimone', name: 'webapp-runner', version: '8.0.33.0'

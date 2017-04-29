@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.header.writers.StaticHeadersWriter;
 
 @Configuration
 @EnableWebSecurity
@@ -13,12 +14,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-	  auth.inMemoryAuthentication().withUser("user1").password("pa55w0rd1").roles("USER");
+	  auth.inMemoryAuthentication().withUser("user1").password("password").roles("USER");
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-	  http.authorizeRequests()
+		
+		http
+		.csrf().disable().authorizeRequests()
 		.antMatchers("/admin/**").access("hasRole('USER')")
 		.and().formLogin();
 	}
