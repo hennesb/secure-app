@@ -15,6 +15,7 @@ gretty {
   jvmArgs = ['-Dspring.profiles.active=development']
   httpPort = 9081
   httpsPort = 9043
+  contextPath = '/'
 }
 
 repositories {

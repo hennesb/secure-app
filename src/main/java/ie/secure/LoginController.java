@@ -23,6 +23,13 @@ public class LoginController {
 	
 	@Autowired
 	private AppTokenProducer producer;
+	
+	@Autowired
+	private UserService userService;
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
 
 	public void setProducer(AppTokenProducer producer) {
 		this.producer = producer;
@@ -40,7 +47,7 @@ public class LoginController {
 	public String loginPage(HttpServletRequest req, HttpServletResponse resp, Model model) {
 		setToken(resp);
 		setModel(model);
-        return AbstractLoginViews.JWT_VIEW;
+        return AbstractLoginViews.INDEX_VIEW;
 	}
 	
 
@@ -78,10 +85,11 @@ public class LoginController {
 		resp.addCookie(csrfCookie());
 	}
 	
-	private void setToken(HttpServletResponse resp){
-		resp.addCookie(cookieMonster.jwtCookie(Identity.builder().withUserName(whoami()).build()));
+	private void setToken(HttpServletResponse resp) {
+		String email = userService.email(whoami());
+		Identity identity = Identity.builder().withUserName(whoami()).withEmail(email).build();
+		resp.addCookie(cookieMonster.jwtCookie(identity));
 	}
-	
 	
 	private Cookie csrfCookie(){
 		return cookieMonster.csrfCookie();

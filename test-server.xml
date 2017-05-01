@@ -136,8 +136,6 @@
                prefix="localhost_access_log" suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
                
-        <Context docBase="/Users/hennesb/apps/static-content/" path="/static" />
-        <Context docBase="/Users/hennesb/apps/angular/angular-tour-of-heroes/" path="/home" />
         
        
 

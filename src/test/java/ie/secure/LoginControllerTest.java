@@ -47,12 +47,13 @@ public class LoginControllerTest {
 		monster = new CookieMonster();
 		monster.setTokenGenerator(new AppTokenProducer());
 		controller.setCookieMonster(monster);
+		controller.setUserService(new UserService());
 	}
 
 
 	@Test
 	public void login_page_get_request_return_view() {		
-		assertEquals(controller.loginPage(req, resp, model), AbstractLoginViews.JWT_VIEW);
+		assertEquals(controller.loginPage(req, resp, model), AbstractLoginViews.INDEX_VIEW);
 	}
 	
    
