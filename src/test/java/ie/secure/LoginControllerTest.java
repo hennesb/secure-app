@@ -72,5 +72,11 @@ public class LoginControllerTest {
 		req.setCookies(monster.jwtCookie(Identity.builder().withUserName("USER").build()));
 		assertEquals(controller.displayPage(req, resp, model), AbstractLoginViews.JWT_VIEW);
 	}
+	
+	@Test
+	public void checkIndexOf(){
+		String invalid = "ABC3006DDD";
+		assertNotEquals(invalid.indexOf("3006"), -1);
+	}
 
 }
