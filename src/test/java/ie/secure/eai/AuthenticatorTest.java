@@ -1,4 +1,4 @@
-package ie.secure;
+package ie.secure.eai;
 
 import static org.junit.Assert.*;
 
@@ -6,13 +6,15 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.mock.web.MockHttpServletResponse;
 
-public class ExceptionsReporterTest {
+public class AuthenticatorTest {
 	
-	private ExceptionsReporter exceptionsReporter;
-	private String tokenValueOne = "2017-08-09:00:00 error-code=99 clientid=67877";
+	private Authenticator authenticator;
+	private MockHttpServletRequest req;
+	private MockHttpServletResponse resp;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -24,16 +26,17 @@ public class ExceptionsReporterTest {
 
 	@Before
 	public void setUp() throws Exception {
-		exceptionsReporter = new ExceptionsReporter();
+		req = new MockHttpServletRequest();
+		resp = new MockHttpServletResponse();
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
-	@Ignore
 	@Test
-	public void tokenizeOne() {
+	public void test() {
+		
 		fail("Not yet implemented"); // TODO
 	}
 

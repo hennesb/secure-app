@@ -53,30 +53,30 @@ public class LoginControllerTest {
 
 	@Test
 	public void login_page_get_request_return_view() {		
-		assertEquals(controller.loginPage(req, resp, model), AbstractLoginViews.INDEX_VIEW);
+		assertEquals(AbstractLoginViews.INDEX_VIEW, controller.loginPage(req, resp, model));
 	}
 	
    
 	@Test
 	public void home_page_landing_get_request_return_view(){
-		assertEquals(controller.displayPage(req, resp, model), AbstractLoginViews.JWT_VIEW);
+		assertEquals(AbstractLoginViews.JWT_VIEW, controller.displayPage(req, resp, model));
 	}
 	
 	@Test
 	public void content_page_get_request_return_view(){
-		assertEquals(controller.contentTest(req, resp, model), AbstractLoginViews.INDEX_VIEW);
+		assertEquals(AbstractLoginViews.INDEX_VIEW,controller.contentTest(req, resp, model));
 	}
 	
 	@Test
 	public void jwt_cookie_in_request_model_and_jwt_view_returned(){
 		req.setCookies(monster.jwtCookie(Identity.builder().withUserName("USER").build()));
-		assertEquals(controller.displayPage(req, resp, model), AbstractLoginViews.JWT_VIEW);
+		assertEquals(AbstractLoginViews.JWT_VIEW, controller.displayPage(req, resp, model));
 	}
 	
 	@Test
 	public void checkIndexOf(){
 		String invalid = "ABC3006DDD";
-		assertNotEquals(invalid.indexOf("3006"), -1);
+		assertNotEquals(-1,invalid.indexOf("3006"));
 	}
 
 }

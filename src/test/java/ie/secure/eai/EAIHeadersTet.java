@@ -1,4 +1,4 @@
-package ie.secure;
+package ie.secure.eai;
 
 import static org.junit.Assert.*;
 
@@ -6,13 +6,9 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
-public class ExceptionsReporterTest {
-	
-	private ExceptionsReporter exceptionsReporter;
-	private String tokenValueOne = "2017-08-09:00:00 error-code=99 clientid=67877";
+public class EAIHeadersTet {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -24,17 +20,15 @@ public class ExceptionsReporterTest {
 
 	@Before
 	public void setUp() throws Exception {
-		exceptionsReporter = new ExceptionsReporter();
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
-	@Ignore
 	@Test
-	public void tokenizeOne() {
-		fail("Not yet implemented"); // TODO
+	public void get_eai_header_name_used_to_send_webseal_user_in_response() {
+		assertEquals(EAIHeaderConstants.EAI_USER_ID_HEADER_NAME, EAIHeaders.headerName(EAIHeader.EAI_USER_ID_HEADER));
 	}
 
 }

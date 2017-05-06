@@ -11026,3 +11026,49 @@ INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["htt
 INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9043"]
 INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9081"]
 INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9043"]
+WARN org.apache.catalina.core.StandardContext - A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+INFO org.apache.catalina.core.StandardService - Starting service Tomcat
+INFO org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.0.23
+INFO org.apache.catalina.startup.ContextConfig - No global web.xml found
+INFO org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - 2 Spring WebApplicationInitializers detected on classpath
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring root WebApplicationContext
+INFO org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat May 06 20:34:11 IST 2017]; root of context hierarchy
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Registering annotated classes: [class ie.bootstrap.AppConfig]
+INFO org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c442940, org.springframework.security.web.context.SecurityContextPersistenceFilter@67799820, org.springframework.security.web.header.HeaderWriterFilter@229ebeab, org.springframework.security.web.authentication.logout.LogoutFilter@4f2a3a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45bfe86f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@343081e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@541cebb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e9ad525, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23a2035e, org.springframework.security.web.session.SessionManagementFilter@487f09, org.springframework.security.web.access.ExceptionTranslationFilter@33104de, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@692c30f4]
+INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String ie.secure.LoginController.loginPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/display || /],methods=[GET]}" onto public java.lang.String ie.secure.LoginController.displayPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/contentTest],methods=[GET]}" onto public java.lang.String ie.secure.LoginController.contentTest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+INFO org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/angular/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/node_modules/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/scripts/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/css/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sat May 06 20:34:11 IST 2017]; root of context hierarchy
+INFO org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1051 ms
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcher'
+INFO org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat May 06 20:34:12 IST 2017]; parent: Root WebApplicationContext
+INFO org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 19 ms
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9043"]
+INFO org.akhikhl.gretty.TomcatServerStartInfo - Tomcat 8.0.23 started and listening on ports 9081, 9043
+INFO org.akhikhl.gretty.TomcatServerStartInfo -  runs at:
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   http://localhost:9081
+INFO org.akhikhl.gretty.TomcatServerStartInfo -   https://localhost:9043
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9043"]
+INFO org.apache.catalina.core.StandardService - Stopping service Tomcat
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcher'
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat May 06 20:34:12 IST 2017]; parent: Root WebApplicationContext
+INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Closing Spring root WebApplicationContext
+INFO org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat May 06 20:34:11 IST 2017]; root of context hierarchy
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9043"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9081"]
+INFO org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9043"]
