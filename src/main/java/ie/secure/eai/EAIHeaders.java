@@ -12,7 +12,7 @@ public class EAIHeaders {
 		map.put(EAIHeader.EAI_USER_ID_HEADER, EAIHeaderConstants.EAI_USER_ID_HEADER_NAME);
 	}
 	
-	public static String headerName(EAIHeader eaiHeader){
+	public static String lookUp(EAIHeader eaiHeader){
 		return map.get(eaiHeader);
 	}
 

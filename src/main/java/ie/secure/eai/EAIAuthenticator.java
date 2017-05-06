@@ -7,7 +7,6 @@ import ie.secure.Identity;
 
 public class EAIAuthenticator implements Authenticator {
 	
-	private static final String EAI_USER_ID_HEADER = "am-eai-user-id";
 
 	@Override
 	public void authenticate(HttpServletRequest req, HttpServletResponse resp) {
@@ -17,7 +16,7 @@ public class EAIAuthenticator implements Authenticator {
 
 	@Override
 	public void authenticate(Identity identity, HttpServletResponse resp) {
-		resp.addHeader(EAI_USER_ID_HEADER, identity.getEmail());
+		resp.addHeader(EAIHeaders.lookUp(EAIHeader.EAI_USER_ID_HEADER), identity.getEmail());
 	}
 
 	@Override

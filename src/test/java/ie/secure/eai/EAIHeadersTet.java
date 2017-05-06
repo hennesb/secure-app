@@ -28,7 +28,7 @@ public class EAIHeadersTet {
 
 	@Test
 	public void get_eai_header_name_used_to_send_webseal_user_in_response() {
-		assertEquals(EAIHeaderConstants.EAI_USER_ID_HEADER_NAME, EAIHeaders.headerName(EAIHeader.EAI_USER_ID_HEADER));
+		assertEquals(EAIHeaderConstants.EAI_USER_ID_HEADER_NAME, EAIHeaders.lookUp(EAIHeader.EAI_USER_ID_HEADER));
 	}
 
 }
